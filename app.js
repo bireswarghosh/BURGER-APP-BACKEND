@@ -25,10 +25,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: { 
-        secure:false,
-      httpOnly:false,
-      sameSite:false,       
-             //  process.env.NODE_ENV === "development" ?
+        secure:true,
+      httpOnly:true,
+      sameSite:"none",       
     },
   })
 );
