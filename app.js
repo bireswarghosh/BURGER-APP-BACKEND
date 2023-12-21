@@ -38,15 +38,16 @@ app.use(
     extended: true,
   })
 );
+app.use(cors({ origin: '*' }));
 
-app.use(
-  cors({
-    credentials: true, // make sura it will be true otherwise cookie and meany more thing are not send 
-    origin:'https://burger-app-front-end.vercel.app/',
-    //process.env.FRONTEND_URL, // add FRONTEND_URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // how meany method will be work add them 
-  })
-);
+// app.use(
+//   cors({
+//     credentials: true, // make sura it will be true otherwise cookie and meany more thing are not send 
+//     origin:'https://burger-app-front-end.vercel.app/',
+//     //process.env.FRONTEND_URL, // add FRONTEND_URL
+//     methods: ["GET", "POST", "PUT", "DELETE"], // how meany method will be work add them 
+//   })
+// );
 
 // in whole app anywhere i can not use passport package   so use hear .          make sure use of this line after creating session  mean 21 - 26   .   It initializes passport, sets up session support, and authenticates the session
 app.use(passport.authenticate("session"));
