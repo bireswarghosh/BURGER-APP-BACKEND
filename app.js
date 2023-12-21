@@ -43,7 +43,7 @@ app.use(
 app.use(
   cors({
     credentials: true, // make sura it will be true otherwise cookie and meany more thing are not send 
-    origin:'http://localhost:3000',
+    origin:'https://burger-app-front-end.vercel.app/',
     //process.env.FRONTEND_URL, // add FRONTEND_URL
     methods: ["GET", "POST", "PUT", "DELETE"], // how meany method will be work add them 
   })
