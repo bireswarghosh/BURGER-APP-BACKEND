@@ -17,9 +17,9 @@ export const logout = (req, res, next) => {
     if (err) return next(err);
     // connect.sid is by default name of cookie .    it destroys the session of the user making the request using req.session.destroy(). Then, it clears a cookie named "connect.sid" using res.clearCookie()
     res.clearCookie("connect.sid",{
-      secure:false,
-      httpOnly:false,
-      sameSite:false,       
+      secure:true,
+      httpOnly:true,
+      sameSite:"none",       
     }
     );
     res.status(200).json({
