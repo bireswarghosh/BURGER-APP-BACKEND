@@ -1,0 +1,83 @@
+    3 mbaburgerwalafinal-master\mbaburgerwalafinal-master\src\redux\reducers\cartReducer.js\28       
+
+           <<=====  USER ROUTES   ====>>
+
+ALL GET USER METHOD TEST IN BROWSER BECAUSE IN  BROWSER TELL ME isAuthenticated OR NOT  
+
+http://localhost:4000/api/v1/googlelogin
+
+http://localhost:4000/api/v1/me
+
+http://localhost:4000/api/v1/logout
+
+
+
+      
+       <<=====  ORDER Router   ====>>
+                
+
+
+
+     <===  API POST REQUEST ON POSTMAN  ==>
+
+https://winter-zodiac-246698.postman.co/workspace/New-Team-Workspace~aa0cb478-9e32-454c-bbe9-1c923259a6e4/collection/27227427-7c5fb85b-245d-4bcd-bdbe-f44cf5a197be?action=share&creator=27227427
+
+READ THE documentation .
+
+  
+
+     <===== HIT THIS URL ON POSTMAN   =====>
+
+ http://localhost:4000/api/v1/createorder
+
+http://localhost:4000/api/v1/createorderonline
+
+http://localhost:4000/api/v1/paymentverification
+
+ see this 3 --> save response result   and see with result
+
+
+
+    <===== HIT THIS URL ON BROWSER   =====>
+
+hear i input my random user is because to avoid google isAuthenticated,  so to fix it mean i want change actual user id which is given by google id so copy google _id from user schema which is exist in mongo db , and pest it on  order schema/user mean change id of user
+
+other wise do not check   -->>
+
+http://localhost:4000/api/v1/myorders   (hear user see his all orders)
+
+ hear i check is isAuthenticated or not and this id help me to pass isAuthenticated  .  if i do not this step admin do not see user details 
+
+
+
+http://localhost:4000/api/v1/order/:id --> hear i use real order id against of :id like below  ↓↧↧   
+
+http://localhost:4000/api/v1/order/654f6ea1e4ee9d9996167b63   --> HEAR SEARCH VIA  order _id 
+
+
+
+
+
+  <<=====  admin panel   ====>>
+
+
+http://localhost:4000/api/v1/admin/orders  
+
+http://localhost:4000/api/v1/admin/order/:id  (ADMIN CAN UPDATE THE stats OF ORDER MEAN -->> if orderStatus === "Preparing so ready it for shipped if shipped is ready then ready for delivered and note delivered date )
+
+
+
+http://localhost:4000/api/v1/admin/users (how much user are present including ADMIN)
+
+http://localhost:4000/api/v1/admin/stats  (counting  "usersCount": ?,"ordersCount": {    "total": ?,    "preparing": ?,    "shipped": ?,    "delivered": ?},"totalIncome": ?)
+
+
+
+
+
+
+
+
+
+
+
