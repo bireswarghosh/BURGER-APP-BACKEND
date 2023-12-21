@@ -38,7 +38,13 @@ app.use(
     extended: true,
   })
 );
-app.use(cors({ origin: '*' }));
+// Allow requests only from your front-end domain
+app.use(cors({
+  origin: 'https://burger-app-front-end.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+}));
 
 // app.use(
 //   cors({
