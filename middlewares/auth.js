@@ -4,7 +4,7 @@ export const isAuthenticated = (req, res, next) => {
 //  const token = req.cookies;
  
   const token = req.cookies["connect.sid"];
-  // console.log(token);
+  console.log(token);
   if (!token) {
     return next(new ErrorHandler("Not Logged In", 401)); // when ERROR in  basically we can passed  only err massage  but if  i want to pass statusCode as  my wishes  so it did not posable so  cerate  a new file to possible it , file exist on  \utils\ErrorHandler.js --> hear to receive err massage by using super() . and receive statusCode by using this.statusCode 
   }
