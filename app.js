@@ -24,11 +24,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { 
-        secure:false,
-      httpOnly:false,
-      sameSite:false,       
-    },
+    // cookie: { 
+    //     secure:false,
+    //   httpOnly:false,
+    //   sameSite:false,       
+    // },
   })
 );
 app.use(cookieParser());// now use it
@@ -39,11 +39,11 @@ app.use(
   })
 );
 // Allow requests only from your front-end domain
-app.use(cors({
-  origin: 'https://burger-app-front-end-v1.onrender.com',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-  optionsSuccessStatus: 204,
+// app.use(cors({
+//   origin: 'https://burger-app-front-end-v1.onrender.com',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+//   optionsSuccessStatus: 204,
 }));
 
 // app.use(
@@ -54,6 +54,13 @@ app.use(cors({
 //     methods: ["GET", "POST", "PUT", "DELETE"], // how meany method will be work add them 
 //   })
 // );
+
+
+app.use(
+  cors({
+    exposedHeaders: ["X-Total-Count"],
+  })
+);
 
 // in whole app anywhere i can not use passport package   so use hear .          make sure use of this line after creating session  mean 21 - 26   .   It initializes passport, sets up session support, and authenticates the session
 app.use(passport.authenticate("session"));
