@@ -59,7 +59,7 @@ router.get(
   passport.authenticate("google"),
   (req, res, next) => {
     // res.redirect("/api/v1/me");
-     res.redirect("https://burger-app-front-end.vercel.app");
+     res.redirect("https://burger-app-front-end-v1.onrender.com");
     // res.redirect(process.env.FRONTEND_URL);
     // res.send("<h1>LOG IN </h1>")
   }
